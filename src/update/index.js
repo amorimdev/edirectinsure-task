@@ -12,6 +12,7 @@ module.exports = function Update () {
 
   async function cmdUpdate (args, done) {
     const params = pick(args, PICK_FIELDS)
+    params.updatedAt = new Date()
 
     return updateTask(params)
       .then(result => done(null, {
