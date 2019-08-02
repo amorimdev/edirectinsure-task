@@ -1,7 +1,7 @@
 'use strict'
 
 const role = 'task'
-const { task } = require('mongo-client/models')
+const { task } = require('edirectinsure-mongo-client/models')
 const { pick } = require('lodash')
 const { PICK_FIELDS, LOG_TAG } = require('./fields')
 
