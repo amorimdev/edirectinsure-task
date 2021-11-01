@@ -13,9 +13,10 @@ seneca.use(Update)
 seneca.use(Delete)
 
 seneca.listen({
-  type: process.env.TASK_PROTOCOL || 'http',
+  type: process.env.TASK_TRANSPORT || 'http',
   host: process.env.TASK_HOST || '0.0.0.0',
   port: process.env.TASK_PORT || process.env.PORT || 8204,
+  protocol: process.env.TASK_PROTOCOL || 'http',
   pin: { role: 'task', cmd: '*' }
 })
 
